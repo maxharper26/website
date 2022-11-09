@@ -1,0 +1,149 @@
+
+
+
+
+
+
+header {  
+  background-color: white;  
+  position: fixed;  
+  left: 0;  
+  right: 0;  
+  top: 0px;  
+  height: 30px;  
+  display: flex;  
+  align-items: center;  
+  
+}  
+header * {  
+  display: inline;  
+}  
+header li {  
+  margin: 20px;  
+}  
+header li a {  
+  color: black;  
+  text-decoration: none; 
+  font-family: helvetica, sans-serif;
+  padding:  20px;
+  padding-bottom:  6px;
+
+
+}  
+
+header li a:hover {
+  background-color:  #5CD265;
+  transition: background-color 500ms linear;
+}
+
+
+
+
+
+
+
+
+
+section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section:nth-child(1){
+  color: white;
+  }
+section:nth-child(2){
+  color: #42455a;
+  background: white;
+} 
+
+/*section:nth-child(4){
+  color: #42455a;
+  background: #e0ffff;
+}*/
+section .container{
+  margin-bottom: 50px;
+  /*height: 20%;*/
+  flex-direction: column;
+
+}
+section h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+section h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+  color: black;
+}
+section .text-container{
+   display: flex;
+   min-height: 120px;
+   /*max-height: 120px;*/
+   margin-top: 50px;
+   margin-bottom: 50px;
+
+   /*height: 30vh;*/
+   /*padding: 20px;*/
+   position: inherit;
+}
+section .text-container .text-box{
+  margin: 20px;
+   min-height: 100px;
+
+  /*max-height: 100px;*/
+  position: relative;
+
+  /*padding-bottom: 600px;*/
+  padding: 20px;
+  background: steelblue;
+}
+section .text-container .photo{
+  height: 75%;
+  padding: 10px;
+  
+}
+section .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: row;
+  }
+}
+
+
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.fade{
+  position: relative;
+  transform: translateY(-150px);
+  opacity: 0;
+  transition: 1s all ease;s
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fade.active{
+  transform: translateY(0);
+  opacity: 1;
+}
